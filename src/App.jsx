@@ -15,6 +15,16 @@ const App = () => {
 
   // get
 
+  const displayText = () => {
+    // p2Element.current.children[0].classList.remove("opacity-0");
+    // p2Element.current.children[1].classList.remove("opacity-0");
+    // p2Element.current.children[2].classList.remove("opacity-0");
+
+    p2Element.current.children[0].classList.remove("text-black");
+    p2Element.current.children[1].classList.remove("text-black");
+    p2Element.current.children[2].classList.remove("text-black");
+  };
+
   useLayoutEffect(() => {
     // gsap.to(pElement.current, {
     //   x: 300,
@@ -41,9 +51,12 @@ const App = () => {
     setTimeout(() => {
       tl.to(pElement.current, {
         x: "0%", // Animate from the left to center
-        opacity: 0.4, // Fade in the text
-        duration: 1, // Animation duration
+        opacity: 0.3, // Fade in the text
+        // duration: 1, // Animation duration
+        duration: 2.3,
+        delay: 0.5,
         stagger: 0.5,
+        onComplete: displayText,
       });
 
       tl.to(pElement.current, {
@@ -57,12 +70,12 @@ const App = () => {
     //   p2Element.current.classList.remove("opacity-0");
     // }, 1500);
 
-    setTimeout(() => {
-      p2Element.current.children[0].classList.remove("opacity-0");
-      p2Element.current.children[1].classList.remove("opacity-0");
-      p2Element.current.children[2].classList.remove("opacity-0");
+    // setTimeout(() => {
+    //   p2Element.current.children[0].classList.remove("opacity-0");
+    //   p2Element.current.children[1].classList.remove("opacity-0");
+    //   p2Element.current.children[2].classList.remove("opacity-0");
 
-    }, 1200);
+    // }, 1200);
   }, []);
 
   // tl.from(pElement.current, { duration: 1, x: -100 })
@@ -98,13 +111,14 @@ const App = () => {
           >
             BRIDGING THE GAP BETWEEN
           </p>
-          <p
-            ref={p2Element}
-            className="text-white text-6xl transition-all duration-700"
-          >
-            <span className="transition-all duration-1000 opacity-0">TECHNOLOGY</span>{" "}
-            <span className="transition-all duration-1000 opacity-0">&</span>{" "}
-            <span className="transition-all duration-1000 opacity-0">IMAGINATION</span>
+          <p ref={p2Element} className="text-white text-6xl ">
+            <span className="text-4xl sm:text-6xl transition-all ease-in duration-1000 text-black">
+              TECHNOLOGY
+            </span>{" "}
+            <span className="text-4xl sm:text-6xl transition-all ease-in duration-1000 text-black">&</span>{" "}
+            <span className="text-4xl sm:text-6xl transition-all ease-in duration-1000 text-black">
+              IMAGINATION
+            </span>
           </p>
         </section>
       </main>
