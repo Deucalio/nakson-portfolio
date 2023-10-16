@@ -180,7 +180,7 @@ const App = () => {
               ref={navBtnThree}
               className="w-18 cursor-pointer border-b-[1px]  border-slate-100 border-opacity-0 py-1 text-center transition-all duration-700 ease-in-out hover:border-opacity-95"
             >
-              What we Offer
+            Offers
             </li>
           </ul>
         </nav>
