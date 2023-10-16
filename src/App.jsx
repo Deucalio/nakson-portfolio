@@ -210,7 +210,7 @@ const App = () => {
         </section>
       </main>
 
-      <section className=" flex flex-col gap-16  py-4">
+      <section className=" flex flex-col gap-16  py-4 pb-16">
         <figure className=" py-4 px-1 md:h-[25rem] grid grid-cols-1 gap-7 md:grid-cols-6">
           <figcaption className="flex flex-col gap-4  md:col-span-1 text-white text-center text-2xl">
             <p className="text-3xl tracking-wide">Nakson</p>
