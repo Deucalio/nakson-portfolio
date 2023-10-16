@@ -187,23 +187,23 @@ const App = () => {
 
         <section
           className=" h-[50vh] my-16
-        text-center mt-16  leading-none text-4xl sm:text-6xl lg:text-7xl  mx-auto uppercase  sm:w-4/5 pt-16 pb-8
+        text-center mt-16  leading-none sm:text-6xl lg:text-7xl  mx-auto uppercase  sm:w-4/5 pt-24 pb-8
         "
         >
           <p
             ref={pElement}
-            className="py-2 text-center w-fit text-3xl mx-auto sm:text-5xl 2xl:text-6xl text-white opacity-0 uppercase"
+            className="py-2 text-center w-fit text-4xl mx-auto sm:text-5xl 2xl:text-6xl text-white opacity-0 uppercase"
           >
             BRIDGING THE GAP BETWEEN
           </p>
           <p ref={p2Element} className="text-white text-6xl ">
-            <span className="leading-3 text-3xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
+            <span className="leading-3 text-4xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
               TECHNOLOGY
             </span>{" "}
-            <span className="leading-3 text-3xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
+            <span className="leading-3 text-4xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
               &
             </span>{" "}
-            <span className="leading-3 text-3xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
+            <span className="leading-3 text-4xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
               IMAGINATION
             </span>
           </p>
@@ -222,6 +222,21 @@ const App = () => {
           <img
             className="bg-left md:col-span-5"
             src="https://i.imgur.com/tOLcxZB.png"
+            alt="Image Description"
+          />
+        </figure>
+
+        <figure className=" py-4 px-1 md:h-[25rem] grid grid-cols-1 gap-7 md:grid-cols-6">
+          <figcaption className="flex flex-col gap-4  md:col-span-1 text-white text-center text-2xl">
+            <p className="text-2xl tracking-wide">Nakson</p>
+            <p className="text-lg opacity-80">
+              Empowering Women, One Purchase at a Time: Discover Your Style,
+              Beauty, and Confidence with Us!
+            </p>
+          </figcaption>
+          <img
+            className="bg-left md:col-span-5"
+            src="https://i.imgur.com/uIlKhUN.png"
             alt="Image Description"
           />
         </figure>
