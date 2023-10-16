@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin.js";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin.js";
@@ -20,6 +20,27 @@ const App = () => {
   const navBtnThree = useRef(null);
 
   let tl = gsap.timeline();
+
+  // get width
+  useEffect(() => {
+    const handleResize = () => {
+      let width = window.innerWidth;
+      console.log("w", width);
+      if (width > 360) {
+        navBtnThree.current.classList.remove("w-fit");
+        navBtnThree.current.classList.add("w-18");
+      } else {
+        navBtnThree.current.classList.add("w-fit");
+        navBtnThree.current.classList.remove("w-18");
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initialize the class based on the initial window width
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // get
   gsap.timeline({
@@ -134,10 +155,6 @@ const App = () => {
         duration: 1,
         delay: 2.5,
         ease: "power4.out",
-        onComplete: () => {
-          navBtnThree.current.classList.remove("border-opacity-5");
-          navBtnThree.current.classList.add("border-opacity-40");
-        },
       }
     );
   }, []);
@@ -145,8 +162,8 @@ const App = () => {
   return (
     <>
       <main className="h-screen px-8 py-8">
-        <nav className="text-slate-300">
-          <ul className="flex flex-row justify-between gap-5 sm:gap-0 text-xl uppercase tracking-wider sm:w-4/5 mx-auto">
+        <nav className="text-slate-300 w-[95%] mx-auto">
+          <ul className="flex flex-row justify-between gap-5 sm:gap-0 text-[1rem]  sm:text-xl uppercase tracking-wider mx-auto">
             <li
               ref={navBtnOne}
               className="w-14 cursor-pointer border-b-[1px] border-slate-100 border-opacity-0 py-1 text-center transition-all duration-700 ease-in-out hover:border-opacity-95"
@@ -155,13 +172,13 @@ const App = () => {
             </li>
             <li
               ref={navBtnTwo}
-              className="w-16 cursor-pointer border-b-[1px]  border-slate-100 border-opacity-0 py-1 text-center transition-all duration-700 ease-in-out hover:border-opacity-95"
+              className="w-18 cursor-pointer border-b-[1px]  border-slate-100 border-opacity-0 py-1 text-center transition-all duration-700 ease-in-out hover:border-opacity-95"
             >
               Nakson
             </li>
             <li
               ref={navBtnThree}
-              className=" w-44 sm:h-9 sm:w-40 cursor-pointer border-opacity-5 rounded-md border-2 border-slate-400 py-1 text-center transition-all duration-700 hover:border-opacity-75"
+              className="w-18 cursor-pointer border-b-[1px]  border-slate-100 border-opacity-0 py-1 text-center transition-all duration-700 ease-in-out hover:border-opacity-95"
             >
               What we Offer
             </li>
@@ -170,28 +187,45 @@ const App = () => {
 
         <section
           className=" h-[50vh] my-16
-        text-center mt-16 leading-normal sm:leading-none text-4xl sm:text-6xl lg:text-7xl  mx-auto uppercase  sm:w-4/5 pt-16 pb-8
+        text-center mt-16  leading-none text-4xl sm:text-6xl lg:text-7xl  mx-auto uppercase  sm:w-4/5 pt-16 pb-8
         "
         >
           <p
             ref={pElement}
-            className="py-2 text-center w-fit text-3xl mx-auto sm:text-6xl text-white opacity-0 uppercase"
+            className="py-2 text-center w-fit text-3xl mx-auto sm:text-5xl 2xl:text-6xl text-white opacity-0 uppercase"
           >
             BRIDGING THE GAP BETWEEN
           </p>
           <p ref={p2Element} className="text-white text-6xl ">
-            <span className="text-4xl sm:text-6xl transition-all ease-in duration-1000 text-black">
+            <span className="leading-3 text-3xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
               TECHNOLOGY
             </span>{" "}
-            <span className="text-4xl sm:text-6xl transition-all ease-in duration-1000 text-black">
+            <span className="leading-3 text-3xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
               &
             </span>{" "}
-            <span className="text-4xl sm:text-6xl transition-all ease-in duration-1000 text-black">
+            <span className="leading-3 text-3xl sm:text-5xl 2xl:text-6xl transition-all ease-in duration-1000 text-black">
               IMAGINATION
             </span>
           </p>
         </section>
       </main>
+
+      <section className=" flex flex-col gap-16  py-16">
+        <figure className=" border-sky-400 border-2 py-4 px-1 md:h-[25rem] grid grid-cols-1 gap-7 md:grid-cols-6">
+          <figcaption className="flex flex-col gap-4  md:col-span-1 text-white text-center text-2xl">
+            <p className="text-4xl tracking-wide">Nakson</p>
+            <p className="text-2xl opacity-80">
+              Empowering Women, One Purchase at a Time: Discover Your Style,
+              Beauty, and Confidence with Us!
+            </p>
+          </figcaption>
+          <img
+            className="bg-left md:col-span-5"
+            src="https://i.imgur.com/tOLcxZB.png"
+            alt="Image Description"
+          />
+        </figure>
+      </section>
     </>
   );
 };
