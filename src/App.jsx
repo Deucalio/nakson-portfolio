@@ -210,37 +210,29 @@ const App = () => {
         </section>
       </main>
 
-      <section className=" flex flex-col gap-16  py-4 pb-4">
-        <figure className=" py-4 px-1 md:h-[25rem] grid grid-cols-1 gap-7 md:grid-cols-6">
-          <figcaption className="flex flex-col gap-4  md:col-span-1 text-white text-center text-2xl">
-            <p className="text-3xl tracking-wide">Nakson</p>
-            <p className="text-xl opacity-80">
-              Empowering Women, One Purchase at a Time: Discover Your Style,
-              Beauty, and Confidence with Us!
-            </p>
-          </figcaption>
-          <img
-            className="bg-left md:col-span-5"
-            src="https://i.imgur.com/40a93T1.png"
-            alt="Image Description"
-          />
-        </figure>
+      <section className="flex flex-col gap-32 py-4 pb-32 lg:px-20">
+  <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
+    <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
+      <p className="text-3xl tracking-wide lg:text-4xl">Deepsea Life Sciences</p>
+      <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At ullam hic rerum eius distinctio? Esse, natus, ad repudiandae obcaecati illum recusandae harum hic facere rem veniam suscipit reiciendis molestias quas!</p>
+    </figcaption>
+    <div className="lg:col-span-5 flex flex-col">
+      <img className="bg-left lg:col-span-5" src="https://i.imgur.com/40a93T1.png" alt="Image Description" />
+      <button className="mx-auto w-56 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 px-4 py-3 text-3xl font-bold tracking-wider text-white transition-all duration-500 hover:scale-105">VISIT</button>
+    </div>
+  </figure>
 
-        <figure className=" py-4 px-1 md:h-[25rem] grid grid-cols-1 gap-7 md:grid-cols-6">
-          <figcaption className="flex flex-col gap-4  md:col-span-1 text-white text-center text-2xl">
-            <p className="text-3xl tracking-wide">Nakson</p>
-            <p className="text-xl opacity-80">
-              Empowering Women, One Purchase at a Time: Discover Your Style,
-              Beauty, and Confidence with Us!
-            </p>
-          </figcaption>
-          <img
-            className="bg-left md:col-span-5"
-            src="https://i.imgur.com/T4DIQtO.png"
-            alt="Image Description"
-          />
-        </figure>
-      </section>
+  <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
+    <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
+      <p className="text-3xl tracking-wide lg:text-4xl">MomDaughts</p>
+      <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui, autem maxime nostrum inventore ad facilis asperiores sint ex ut cupiditate non quod ratione. Magnam at nisi magni aperiam quas.</p>
+    </figcaption>
+    <div className="flex flex-col lg:col-span-5">
+      <img className="bg-left lg:col-span-5" src="https://i.imgur.com/T4DIQtO.png" alt="Image Description" />
+      <button className="mx-auto w-56 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 px-4 py-3 text-3xl font-bold tracking-wider text-white transition-all duration-500 hover:scale-105">VISIT</button>
+    </div>
+  </figure>
+</section>
     </>
   );
 };
