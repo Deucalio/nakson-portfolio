@@ -93,7 +93,7 @@ const App = () => {
 
       tl.to(pElement.current, {
         opacity: 1, // Fade in the text
-        duration: 0.7, // Animation duration
+        duration: 1, // Animation duration
         stagger: 0.5,
       });
     }, 500);
@@ -119,7 +119,7 @@ const App = () => {
         opacity: 1,
         stagger: 0.05,
         duration: 1,
-        delay: 2.5,
+        delay: 1.5,
         ease: "power4.out",
       }
     );
@@ -136,7 +136,7 @@ const App = () => {
         opacity: 1,
         stagger: 0.05,
         duration: 1,
-        delay: 2.5,
+        delay: 1.5,
         ease: "power4.out",
       }
     );
@@ -153,7 +153,7 @@ const App = () => {
         opacity: 1,
         stagger: 0.05,
         duration: 1,
-        delay: 2.5,
+        delay: 1.5,
         ease: "power4.out",
       }
     );
