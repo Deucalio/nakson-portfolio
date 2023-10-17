@@ -221,7 +221,7 @@ const App = () => {
           </figcaption>
           <img
             className="bg-left md:col-span-5"
-            src="https://i.imgur.com/tOLcxZB.png"
+            src="https://i.imgur.com/40a93T1.png"
             alt="Image Description"
           />
         </figure>
