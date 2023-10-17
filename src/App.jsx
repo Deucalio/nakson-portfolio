@@ -86,7 +86,7 @@ const App = () => {
         x: "0%", // Animate from the left to center
         opacity: 0.3, // Fade in the text
         // duration: 1, // Animation duration
-        duration: 1,
+        duration: 0.5,
         stagger: 0.5,
         onComplete: displayText,
       });
