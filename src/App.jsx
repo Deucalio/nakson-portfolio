@@ -93,7 +93,7 @@ const App = () => {
 
       tl.to(pElement.current, {
         opacity: 1, // Fade in the text
-        duration: 1.2, // Animation duration
+        duration: 0.7, // Animation duration
         stagger: 0.5,
       });
     }, 500);
