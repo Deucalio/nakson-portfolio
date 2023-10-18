@@ -4,10 +4,12 @@ import { PixiPlugin } from "gsap/PixiPlugin.js";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin.js";
 import { TextPlugin } from "gsap/TextPlugin.js";
 import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //without this line, PixiPlugin and MotionPathPlugin may get dropped by your bundler (tree shaking)...
 gsap.registerPlugin(PixiPlugin, MotionPathPlugin);
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   // target p element for gsap animation
@@ -18,6 +20,9 @@ const App = () => {
   const navBtnOne = useRef(null);
   const navBtnTwo = useRef(null);
   const navBtnThree = useRef(null);
+
+  const figure1 = useRef(null);
+  const figure2 = useRef(null);
 
   let tl = gsap.timeline();
 
@@ -76,6 +81,22 @@ const App = () => {
     //     repeat: 0,
     //   });
     // }, 500);
+
+    gsap.to(figure1.current, {
+      scrollTrigger: figure1.current, // start animation when ".box" enters the viewport
+      x: 0, // animate element's x property to 80
+      onComplete: () => {
+        figure1.current.classList.remove("blur-lg");
+      },
+    });
+
+    gsap.to(figure2.current, {
+      scrollTrigger: figure2.current, // start animation when ".box" enters the viewport
+      x: 0, // animate element's x property to 80
+      onComplete: () => {
+        figure2.current.classList.remove("blur-lg");
+      },
+    });
 
     gsap.set(pElement.current, { x: "-100%", opacity: 0 });
 
@@ -212,7 +233,10 @@ const App = () => {
 
       <section className="flex flex-col gap-32 py-4 pb-32 lg:px-20">
         <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
-          <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
+          <figcaption
+            ref={figure1}
+            className="transition-all duration-700 blur-lg flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center"
+          >
             <p className="text-3xl tracking-wide lg:text-4xl">
               Deepsea Life Sciences
             </p>
@@ -236,7 +260,10 @@ const App = () => {
         </figure>
 
         <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
-          <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
+          <figcaption
+            ref={figure2}
+            className="transition-all duration-700 blur-lg flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center"
+          >
             <p className="text-3xl tracking-wide lg:text-4xl">MomDaughts</p>
             <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui,
