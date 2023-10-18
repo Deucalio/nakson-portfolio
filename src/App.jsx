@@ -23,6 +23,7 @@ const App = () => {
 
   const figure1 = useRef(null);
   const figure2 = useRef(null);
+  const figure2_scroll_trigger = useRef(null);
 
   let tl = gsap.timeline();
 
@@ -84,17 +85,19 @@ const App = () => {
 
     gsap.to(figure1.current, {
       scrollTrigger: figure1.current, // start animation when ".box" enters the viewport
-      x: 0, // animate element's x property to 80
       onComplete: () => {
         figure1.current.classList.remove("blur-lg");
+        figure1.current.classList.remove("opacity-0");
       },
     });
 
     gsap.to(figure2.current, {
-      scrollTrigger: figure2.current, // start animation when ".box" enters the viewport
-      x: 0, // animate element's x property to 80
+      scrollTrigger: figure2_scroll_trigger.current, // start animation when ".box" enters the viewport
+      stagger: 0.5,
+      delay: 0.1,
       onComplete: () => {
         figure2.current.classList.remove("blur-lg");
+        figure2.current.classList.remove("opacity-0");
       },
     });
 
@@ -231,12 +234,12 @@ const App = () => {
         </section>
       </main>
 
-      <section className="flex flex-col gap-32 py-4 pb-32 lg:px-20">
-        <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
-          <figcaption
-            ref={figure1}
-            className="transition-all duration-700 blur-lg flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center"
-          >
+      <section className="flex flex-col gap-32 lg:gap-60 py-4 pb-32 lg:px-20">
+        <figure
+          ref={figure1}
+          className="transition-all duration-300 blur-lg opacity-0 grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
+        >
+          <figcaption className=" flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
             <p className="text-3xl tracking-wide lg:text-4xl">
               Deepsea Life Sciences
             </p>
@@ -250,7 +253,7 @@ const App = () => {
           <div className="lg:col-span-5 flex flex-col">
             <img
               className="bg-left lg:col-span-5"
-              src="https://i.imgur.com/40a93T1.png"
+              src="https://i.imgur.com/CoJt4QQ.png"
               alt="Image Description"
             />
             <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 py-1 sm:py-2 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
@@ -259,22 +262,24 @@ const App = () => {
           </div>
         </figure>
 
-        <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
-          <figcaption
-            ref={figure2}
-            className="transition-all duration-700 blur-lg flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center"
-          >
-            <p className="text-3xl tracking-wide lg:text-4xl">MomDaughts</p>
+        <figure
+          ref={figure2}
+          className="transition-all duration-300 blur-lg opacity-0 grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
+        >
+          <figcaption className=" flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
+            <p
+            ref={figure2_scroll_trigger}
+             className="text-3xl tracking-wide lg:text-4xl">MomDaughts</p>
             <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui,
               autem maxime nostrum inventore ad facilis asperiores sint ex ut
               cupiditate non quod ratione. Magnam at nisi magni aperiam quas.
             </p>
           </figcaption>
-          <div className="flex flex-col lg:col-span-5">
+          <div className="flex flex-col lg:col-span-5 ">
             <img
               className="bg-left lg:col-span-5"
-              src="https://i.imgur.com/T4DIQtO.png"
+              src="https://i.imgur.com/XahLs5T.png"
               alt="Image Description"
             />
             <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 py-1 sm:py-2 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
