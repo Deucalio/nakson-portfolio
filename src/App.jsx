@@ -86,18 +86,16 @@ const App = () => {
     gsap.to(figure1.current, {
       scrollTrigger: figure1.current, // start animation when ".box" enters the viewport
       onComplete: () => {
+        // figure1.current.classList.remove("opacity-0");
         figure1.current.classList.remove("blur-lg");
-        figure1.current.classList.remove("opacity-0");
       },
     });
 
     gsap.to(figure2.current, {
       scrollTrigger: figure2_scroll_trigger.current, // start animation when ".box" enters the viewport
       stagger: 0.5,
-      delay: 0.1,
       onComplete: () => {
         figure2.current.classList.remove("blur-lg");
-        figure2.current.classList.remove("opacity-0");
       },
     });
 
@@ -237,7 +235,7 @@ const App = () => {
       <section className="flex flex-col gap-32 lg:gap-60 py-4 pb-32 lg:px-20">
         <figure
           ref={figure1}
-          className="transition-all duration-300 blur-lg opacity-0 grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
+          className="transition-all duration-700 blur-lg grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
         >
           <figcaption className=" flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
             <p className="text-3xl tracking-wide lg:text-4xl">
@@ -264,12 +262,15 @@ const App = () => {
 
         <figure
           ref={figure2}
-          className="transition-all duration-300 blur-lg opacity-0 grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
+          className="transition-all duration-700 blur-lg grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
         >
           <figcaption className=" flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
             <p
-            ref={figure2_scroll_trigger}
-             className="text-3xl tracking-wide lg:text-4xl">MomDaughts</p>
+              ref={figure2_scroll_trigger}
+              className="text-3xl tracking-wide lg:text-4xl"
+            >
+              MomDaughts
+            </p>
             <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui,
               autem maxime nostrum inventore ad facilis asperiores sint ex ut
