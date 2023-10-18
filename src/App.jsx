@@ -254,8 +254,14 @@ const App = () => {
               src="https://i.imgur.com/CoJt4QQ.png"
               alt="Image Description"
             />
-            <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 py-1 sm:py-2 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
-              VISIT
+            <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
+              <a
+                className="inline-block w-full h-full py-1 sm:py-2"
+                target="_blank"
+                href="https://deepsealifesciences.com"
+              >
+                VISIT
+              </a>
             </button>
           </div>
         </figure>
@@ -283,8 +289,14 @@ const App = () => {
               src="https://i.imgur.com/XahLs5T.png"
               alt="Image Description"
             />
-            <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 py-1 sm:py-2 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
-              VISIT
+            <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
+              <a
+                className="inline-block w-full h-full py-1 sm:py-2"
+                target="_blank"
+                href="https://momdaughts.com"
+              >
+                VISIT
+              </a>
             </button>
           </div>
         </figure>
