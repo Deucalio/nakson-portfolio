@@ -180,7 +180,7 @@ const App = () => {
               ref={navBtnThree}
               className="w-18 cursor-pointer border-b-[1px]  border-slate-100 border-opacity-0 py-1 text-center transition-all duration-700 ease-in-out hover:border-opacity-95"
             >
-            Offers
+              Offers
             </li>
           </ul>
         </nav>
@@ -211,28 +211,51 @@ const App = () => {
       </main>
 
       <section className="flex flex-col gap-32 py-4 pb-32 lg:px-20">
-  <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
-    <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
-      <p className="text-3xl tracking-wide lg:text-4xl">Deepsea Life Sciences</p>
-      <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At ullam hic rerum eius distinctio? Esse, natus, ad repudiandae obcaecati illum recusandae harum hic facere rem veniam suscipit reiciendis molestias quas!</p>
-    </figcaption>
-    <div className="lg:col-span-5 flex flex-col">
-      <img className="bg-left lg:col-span-5" src="https://i.imgur.com/40a93T1.png" alt="Image Description" />
-      <button className="mx-auto w-56 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 px-4 py-3 text-3xl font-bold tracking-wider text-white transition-all duration-500 hover:scale-105">VISIT</button>
-    </div>
-  </figure>
+        <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
+          <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
+            <p className="text-3xl tracking-wide lg:text-4xl">
+              Deepsea Life Sciences
+            </p>
+            <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At ullam
+              hic rerum eius distinctio? Esse, natus, ad repudiandae obcaecati
+              illum recusandae harum hic facere rem veniam suscipit reiciendis
+              molestias quas!
+            </p>
+          </figcaption>
+          <div className="lg:col-span-5 flex flex-col">
+            <img
+              className="bg-left lg:col-span-5"
+              src="https://i.imgur.com/40a93T1.png"
+              alt="Image Description"
+            />
+            <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 py-1 sm:py-2 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
+              VISIT
+            </button>
+          </div>
+        </figure>
 
-  <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
-    <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
-      <p className="text-3xl tracking-wide lg:text-4xl">MomDaughts</p>
-      <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui, autem maxime nostrum inventore ad facilis asperiores sint ex ut cupiditate non quod ratione. Magnam at nisi magni aperiam quas.</p>
-    </figcaption>
-    <div className="flex flex-col lg:col-span-5">
-      <img className="bg-left lg:col-span-5" src="https://i.imgur.com/T4DIQtO.png" alt="Image Description" />
-      <button className="mx-auto w-56 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 px-4 py-3 text-3xl font-bold tracking-wider text-white transition-all duration-500 hover:scale-105">VISIT</button>
-    </div>
-  </figure>
-</section>
+        <figure className="grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9">
+          <figcaption className="flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
+            <p className="text-3xl tracking-wide lg:text-4xl">MomDaughts</p>
+            <p className="mx-auto w-2/3 text-xl opacity-80 lg:w-3/4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui,
+              autem maxime nostrum inventore ad facilis asperiores sint ex ut
+              cupiditate non quod ratione. Magnam at nisi magni aperiam quas.
+            </p>
+          </figcaption>
+          <div className="flex flex-col lg:col-span-5">
+            <img
+              className="bg-left lg:col-span-5"
+              src="https://i.imgur.com/T4DIQtO.png"
+              alt="Image Description"
+            />
+            <button className="mx-auto w-36 rounded-sm bg-gradient-to-r from-indigo-400 to-sky-600 py-1 sm:py-2 sm:text-xl font-semibold tracking-wider text-white transition-all duration-500 hover:scale-105">
+              VISIT
+            </button>
+          </div>
+        </figure>
+      </section>
     </>
   );
 };
