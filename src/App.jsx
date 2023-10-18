@@ -235,7 +235,7 @@ const App = () => {
       <section className="flex flex-col gap-32 lg:gap-60 py-4 pb-32 lg:px-20">
         <figure
           ref={figure1}
-          className="transition-all duration-700 blur-lg grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
+          className="transition-all duration-300 lg:duration-700 blur-lg grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
         >
           <figcaption className=" flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
             <p className="text-3xl tracking-wide lg:text-4xl">
@@ -262,7 +262,7 @@ const App = () => {
 
         <figure
           ref={figure2}
-          className="transition-all duration-700 blur-lg grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
+          className="transition-all duration-300 lg:duration-700 blur-lg grid grid-cols-1 gap-7 px-1 py-4 lg:grid-cols-9"
         >
           <figcaption className=" flex flex-col gap-4 text-center text-2xl text-white lg:col-span-4 lg:-ml-12 lg:items-center lg:justify-center">
             <p
